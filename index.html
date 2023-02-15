@@ -13,6 +13,56 @@
             return !bool;
         }
 
+        function add(x, y) {
+            return x + y;
+        }
+
+        function minus(x, y) {
+            return x - y;
+        }
+
+        describe('Bowling test 1', () => {
+            it('Calculate frame', () => {
+
+                //arrange
+                const roll1 = 5;
+                const roll2 = 2;
+                //act
+                const result = add(roll1, roll2)
+
+                //assert
+                expect(result).toBeLessThan(10);
+            })
+        })
+
+        describe('Math Functions', () => {
+
+            //arrange
+            let num1;
+            let num2;
+            beforeEach(() => {
+                num1 = 2;
+                num2 = 3;
+            })
+
+            it('Gets the Sum of Two Numbers', () => {
+
+                //act
+                const result = add(num1, num2);
+
+                //arrange
+                expect(result + 1).toBe(6);
+            });
+            it('Gets the Difference of Two Numbers', () => {
+
+                //act
+                const result = minus(num1, num2);
+
+                //arrange
+                expect(result).toBe(-1);
+            });
+        })
+
         describe('Write Your Test Group Descriptions Here', () => {
             it('Write Your Test Expectation Here', () => {
                 // arrange
